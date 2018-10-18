@@ -24,7 +24,7 @@ class SmurfForm extends Component {
     this.handleOnChange = this.handleOnChange.bind(this);
   }
   handleOnSubmit(event) {
-    let id = this.props.id || 0;
+    // let id = this.props.id || 0;
     // this.props.submit(this.state.newSmurf, id);
     this.props.addSmurfs(this.state.newSmurf);
     this.setState({ newSmurf: { name: "", age: "", email: "" } });
@@ -80,4 +80,7 @@ class SmurfForm extends Component {
   }
 }
 
-export default connect(mapStateToProps, { addSmurfs })(SmurfForm);
+export default connect(
+  mapStateToProps,
+  { addSmurfs }
+)(SmurfForm);

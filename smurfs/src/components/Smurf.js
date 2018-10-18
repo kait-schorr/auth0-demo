@@ -9,7 +9,6 @@ function mapStateToProps(state) {
 
 class Smurf extends Component {
   render() {
-    console.log(this.props.smurf.id);
     return (
       <Card className="smurf">
         <CardBody>
@@ -25,4 +24,7 @@ class Smurf extends Component {
   }
 }
 
-export default connect(mapStateToProps, { deleteSmurf })(Smurf);
+export default connect(
+  mapStateToProps,
+  { deleteSmurf }
+)(Smurf);
